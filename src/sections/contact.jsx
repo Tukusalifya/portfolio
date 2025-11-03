@@ -7,7 +7,7 @@ const Contact = () => {
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6 }}
       id="contact"
       className="pt-20 pb-15 bg-[var(--compliment-bg-color)] w-full h-full lg:px-[100px] px-5"

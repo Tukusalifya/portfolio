@@ -30,7 +30,7 @@ const Projects = () => {
     <motion.section
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6 }}
       id="projects"
       className="h-full lg:px-[100px] px-5 pb-15 pt-[80px] bg-[var(--background-color)]"
