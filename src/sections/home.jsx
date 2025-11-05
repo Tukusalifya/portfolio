@@ -33,14 +33,14 @@ const Home = () => {
   };
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center w-full lg:h-screen h-full lg:px-20 md:px-10 px-5 bg-[var(--background-color)] gap-10 lg:gap-4">
-      <div className="lg:w-1/2 w-full md:px-10 gap-5 lg:gap-0 flex flex-col justify-center mt-20 lg:mt-0">
+    <section className="flex flex-col-reverse lg:flex-row items-center justify-center w-full lg:h-screen h-full lg:px-20 md:px-10 px-5 bg-[var(--background-color)] gap-10 lg:gap-4 pb-10">
+      <div className="lg:w-1/2 w-full md:px-10 gap-5 lg:gap-0 flex flex-col justify-center md:mt-5 lg:mt-0">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           id="home"
-          className="text-gray-900 font-bold text-3xl lg:mb-5"
+          className="text-gray-900 font-bold text-4xl text-center md:text-left md:text-3xl lg:mb-5"
         >
           <span className="text-[var(--primary-color)]">Hello</span>, I'm
         </motion.div>
@@ -48,7 +48,7 @@ const Home = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-gray-900 font-bold text-left text-6xl lg:mb-10"
+          className="text-gray-900 font-bold text-center md:text-left text-4xl md:text-6xl mb-8 md:mb-0 lg:mb-10"
         >
           Tukusalifya{" "}
           <span className="text-[var(--primary-color)]">Sichali,</span>
@@ -57,7 +57,7 @@ const Home = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-gray-600 text-left font-semibold text-[18px] mb-6"
+          className="text-gray-600 text-center md:text-left font-semibold text-[18px] mb-6"
         >
           A passionate Computer Science student driven by technology,
           problem-solving, and creativity. I love building impactful projects,
@@ -67,20 +67,20 @@ const Home = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-wrap gap-3 mb-20"
+          className="flex flex-wrap gap-3 md:mb-10 mb-15"
         >
-          <span className="px-4 py-2 bg-[#219FBD] text-white rounded-full text-sm font-medium flex gap-[10px]">
+          <span className="px-4 py-2 bg-[#219FBD] text-white rounded-full md:text-sm text-[12px] font-medium flex gap-[10px]">
             <Pencil size={20} color="white" /> Graphics Designer
           </span>
-          <span className="px-4 py-2 bg-[var(--primary-color)] text-white rounded-full text-sm font-medium flex gap-[10px]">
+          <span className="px-4 py-2 bg-[var(--primary-color)] text-white rounded-full md:text-sm text-[12px] font-medium flex gap-[10px]">
             <Cog size={20} color="white" />
             Automation Expert
           </span>
-          <span className="px-4 py-2 bg-[#F4F4F4] text-gray-700 rounded-full text-sm font-medium flex gap-[10px]">
+          <span className="px-4 py-2 bg-[#F4F4F4] text-gray-700 rounded-full  md:text-sm text-[12px] font-medium flex gap-[10px]">
             <Code2 size={20} color="black" />
             Full Stack Developer
           </span>
-          <span className="px-4 py-2 bg-[#BF4544] text-white rounded-full text-sm font-medium flex gap-[10px]">
+          <span className="px-4 py-2 bg-[#BF4544] text-white rounded-full  md:text-sm text-[12px] font-medium flex gap-[10px]">
             <AppWindow size={20} color="white" />
             Mobile Developer
           </span>
@@ -119,7 +119,7 @@ const Home = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex lg:justify-end justify-center"
+        className="flex lg:justify-end justify-center pt-20"
       >
         <img
           className="w-[400px] h-[400px] md:w-[500px] md:h-[500px] object-cover rounded-full ml-auto"
