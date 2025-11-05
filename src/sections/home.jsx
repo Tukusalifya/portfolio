@@ -1,6 +1,8 @@
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
+import { scroller } from "react-scroll";
+
 import {
   AppWindow,
   Code2,
@@ -13,6 +15,23 @@ import {
 } from "lucide-react";
 
 const Home = () => {
+  const downloadCV = () => {
+    const filePath = "files/Tukusalifya_Sichali_CV.pdf";
+    const link = document.createElement("a");
+    link.href = filePath;
+    link.download = "Tukusalifya_Sichali_CV.pdf";
+    link.click();
+  };
+
+  const scrollToContact = () => {
+    scroller.scrollTo("contact", {
+      duration: 600,
+      delay: 0,
+      offset: -25,
+      smooth: "easeInOutQuart",
+    });
+  };
+
   return (
     <section className="flex flex-col lg:flex-row items-center justify-center w-full lg:h-screen h-full lg:px-20 md:px-10 px-5 bg-[var(--background-color)] gap-10 lg:gap-4">
       <div className="lg:w-1/2 w-full md:px-10 gap-5 lg:gap-0 flex flex-col justify-center mt-20 lg:mt-0">
@@ -20,7 +39,7 @@ const Home = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          id='home'
+          id="home"
           className="text-gray-900 font-bold text-3xl lg:mb-5"
         >
           <span className="text-[var(--primary-color)]">Hello</span>, I'm
@@ -72,34 +91,26 @@ const Home = () => {
           transition={{ duration: 0.5 }}
         >
           <Stack direction="row" spacing={2}>
-            <Button
-              variant="outlined"
-              href="#contained-buttons"
-              sx={{
-                borderColor: "var(--secondary-color)",
-                backgroundColor: "white",
-              }}
+            <button
+              id="hire"
+              onClick={scrollToContact}
+              className="w-fit px-4 py-2 flex items-center justify-center border border-[var(--secondary-color)] bg-white rounded-[5px] cursor-pointer transition-transform duration-300 transform hover:scale-105 active:scale-95"
             >
               <div className="flex items-center gap-2">
                 <Handshake size={20} color="var(--secondary-color)" />
-                Hire Me
+                <p className="text-[var(--secondary-color)]">Hire Me</p>
               </div>
-            </Button>
-            <Button
-              variant="contained"
-              href="#contained-buttons"
-              sx={{
-                backgroundColor: "var(--primary-color) ",
-                "&:hover": {
-                  backgroundColor: "var(--primary-color-hover) ",
-                },
-              }}
+            </button>
+
+            <button
+              onClick={downloadCV}
+              className="w-fit px-4 py-2 flex items-center justify-center border border-[var(--primary-color)] bg-[var(--primary-color)] rounded-[5px] hover:bg-[var(--primary-color-hover)] cursor-pointer transition-transform duration-300 transform hover:scale-105 active:scale-95"
             >
               <div className="flex items-center gap-2">
                 <Download size={20} color="white" />
-                Download CV
+                <p className="text-white">Download CV</p>
               </div>
-            </Button>
+            </button>
           </Stack>
         </motion.div>
       </div>

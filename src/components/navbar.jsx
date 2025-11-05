@@ -1,13 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+    const scrollY = window.scrollY;
+
+    if(scrollY > 100) {
+      setScrolled(true);
+    }else { 
+      setScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll); 
+  }, []);
+
+
 
   return (
-    <nav className="bg-[var(--background-color)] fixed w-full top-0 left-0 z-10">
+    <nav className={`bg-[var(--background-color)] fixed w-full top-0 left-0 z-10 ${scrolled ? "border-b border-gray-200" : ""}`}>
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-15">
           {/* logo */}
@@ -25,7 +44,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-120}
-              className="text-[var(--text-color)] hover:text-[var(--primary-color)]"
+              className="text-[var(--text-color)] hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Home
             </Link>
@@ -34,7 +53,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="text-[var(--text-color)] hover:text-[var(--primary-color)]"
+              className="text-[var(--text-color)] hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               About
             </Link>
@@ -43,7 +62,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="text-[var(--text-color)] hover:text-[var(--primary-color)]"
+              className="text-[var(--text-color)] hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Skills
             </Link>
@@ -52,7 +71,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="text-[var(--text-color)] hover:text-[var(--primary-color)]"
+              className="text-[var(--text-color)] hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Experience
             </Link>
@@ -61,7 +80,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="text-[var(--text-color)] hover:text-[var(--primary-color)]"
+              className="text-[var(--text-color)] hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Projects
             </Link>
@@ -70,7 +89,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="text-[var(--text-color)]hover:text-[var(--primary-color)]"
+              className="text-[var(--text-color)]hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Contact
             </Link>
@@ -102,7 +121,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-120}
-              className="block text-gray-700 hover:text-[var(--primary-color)]"
+              className="block text-gray-700 hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Home
             </Link>
@@ -111,7 +130,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="block text-gray-700hover:text-[var(--primary-color)]"
+              className="block text-gray-700hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               About
             </Link>
@@ -120,7 +139,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="block text-gray-700hover:text-[var(--primary-color)]"
+              className="block text-gray-700hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Skills
             </Link>
@@ -129,7 +148,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="block text-gray-700hover:text-[var(--primary-color)]"
+              className="block text-gray-700hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Projects
             </Link>
@@ -138,7 +157,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="block text-gray-700hover:text-[var(--primary-color)]"
+              className="block text-gray-700hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Experience
             </Link>
@@ -147,7 +166,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-15}
-              className="block text-gray-700hover:text-[var(--primary-color)]"
+              className="block text-gray-700hover:text-[var(--primary-color)] hover:cursor-pointer"
             >
               Contact
             </Link>

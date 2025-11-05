@@ -7,7 +7,7 @@ const About = () => {
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: false, amount: 0.1 }}
       transition={{ duration: 0.6 }}
       id="about"
       className="h-full bg-[var(--compliment-bg-color)] pb-20 pt-20 "
@@ -37,28 +37,22 @@ const About = () => {
 
                 <div className="space-y-4 text-[var(--text-color)] text-sm leading-relaxed">
                   <p className="text-gray-700">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer eget nisl nibh. Suspendisse at ligula at neque
-                    ultricies elementum vel vel risus. Sed nec felis mi. In id
-                    facilisis lectus. Mauris rhoncus metus ac magna vulputate,
-                    nec lacinia libero convallis. Cras vitae gravida sem, at
-                    sodales odio.
+                    I am a dedicated final-year computer science student at Mulungushi University,
+                    with a strong foundation in web development and a keen interest in UI/UX design.
+                    I enjoy taking on projects that challenge and expand my skills.
                   </p>
 
                   <p className="text-gray-700">
-                    Aenean efficitur eros non risus vehicula, non sollicitudin
-                    mi gravida. Donec vel velit posuere, faucibus lorem in,
-                    efficitur ex. Nam convallis, est at pulvinar gravida, lorem
-                    eros maximus lectus, nec elementum massa arcu nec lorem.
-                    Proin vel nunc id risus finibus elementum nec ac sapien.
+                    My creativity extends beyond code to art and design, where I explore both traditional and
+                    digital mediums.
+                    I also have a passion for novels, which fuels my love for storytelling and imaginative
+                    narratives.
                   </p>
 
                   <p className="text-gray-700">
-                    Etiam non odio et lectus tincidunt varius. Curabitur
-                    sagittis enim vitae purus viverra rhoncus. Pellentesque eu
-                    nisl sit amet magna fermentum gravida. Nam sodales, velit
-                    nec pretium viverra, neque justo dapibus neque, nec sagittis
-                    leo elit a purus.
+                    Driven by a desire to learn, innovate, and contribute to the digital landscape,
+                    I thrive at the intersection of technology and creativity.
+                    Join me on this exciting journey where code meets creativity!
                   </p>
                 </div>
               </div>
