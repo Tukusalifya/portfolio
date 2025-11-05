@@ -33,7 +33,7 @@ const Home = () => {
   };
 
   return (
-    <section className="flex flex-col-reverse lg:flex-row items-center justify-center w-full lg:h-screen h-full lg:px-20 md:px-10 px-5 bg-[var(--background-color)] gap-10 lg:gap-4 pb-10">
+    <section className="flex flex-col-reverse lg:flex-row items-center justify-center w-full lg:h-screen h-full lg:px-20 md:px-10 px-5 bg-[var(--background-color)] gap-10 lg:gap-4 pb-10 md:pb-0">
       <div className="lg:w-1/2 w-full md:px-10 gap-5 lg:gap-0 flex flex-col justify-center md:mt-5 lg:mt-0">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -48,7 +48,7 @@ const Home = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-gray-900 font-bold text-center md:text-left text-4xl md:text-6xl mb-8 md:mb-0 lg:mb-10"
+          className="text-gray-900 font-bold text-center md:text-left text-4xl md:text-6xl md:mb-0 lg:mb-10"
         >
           Tukusalifya{" "}
           <span className="text-[var(--primary-color)]">Sichali,</span>
@@ -119,10 +119,10 @@ const Home = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex lg:justify-end justify-center pt-20"
+        className="flex lg:justify-end justify-center pt-25 md:pt-20 lg:pt-0"
       >
         <img
-          className="w-[400px] h-[400px] md:w-[500px] md:h-[500px] object-cover rounded-full ml-auto"
+          className="w-[270px] h-[270px] md:w-[500px] md:h-[500px] object-cover rounded-full ml-auto"
           src="/images/Artboard 1.png"
           alt="profile-image"
         />
