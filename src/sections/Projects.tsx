@@ -3,13 +3,11 @@ import {
   HeartPulse,
   LayoutPanelTop,
   Smartphone,
-  Code2,
 } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { projects } from "../data/projects.ts";
 import { SectionEyebrow } from "../components/SectionEyebrow.tsx";
 import { BrandIcon } from "../components/BrandIcon.tsx";
-const Github = Code2;
 const icons = {
   heart: HeartPulse,
   smartphone: Smartphone,
