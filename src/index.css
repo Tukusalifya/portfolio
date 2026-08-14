@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg-cream: #FFFBF5;
+  --color-bg-paper: #FEFEFE;
+  --color-ink: #1A1A1F;
+  --color-ink-deep: #101016;
+  --color-brush-orange: #E8721E;
+  --color-signal-teal: #1B96B0;
+  --color-tag-crimson: #C1453F;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply m-0 min-w-80 bg-bg-cream font-sans text-ink; }
+  a, button { @apply focus-visible:outline-3 focus-visible:outline-signal-teal focus-visible:outline-offset-4; }
+}
+
+@keyframes blink { 50% { opacity: 0; } }
