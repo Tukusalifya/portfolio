@@ -3,6 +3,7 @@ import {
   HeartPulse,
   LayoutPanelTop,
   Smartphone,
+  Code2,
 } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { projects } from "../data/projects.ts";
