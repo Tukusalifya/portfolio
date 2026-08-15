@@ -8,15 +8,27 @@ export function Footer() {
           <p className="mb-5 text-[11px] tracking-[.22em] text-signal-teal">
             NAVIGATION
           </p>
-          {["home", "about", "projects", "contact"].map((link) => (
+          {["home", "about", "projects", "contact"].map((link) => {
+            const currentLink = link === "home" ? "top" : link;
+            return (
             <a
               className="mb-3 block hover:text-white"
-              href={link === "home" ? "#top" : `#${link}`}
+              href="/"
               key={link}
+              onClick={(event) => {
+                event.preventDefault();
+                const element = document.getElementById(currentLink);
+
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               {link}
             </a>
-          ))}
+          )
+
+          })}
         </div>
         <div>
           <p className="mb-5 text-[11px] tracking-[.22em] text-brush-orange">

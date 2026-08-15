@@ -14,7 +14,7 @@ export function Hero() {
   const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.contact.email}`;
   return (
     <section id="top" className="border-b border-[#eee8df] bg-bg-cream">
-      <div className="mx-auto grid min-h-[660px] max-w-[1100px] grid-cols-[1fr_.82fr] items-center gap-14 px-6 py-12 max-md:grid-cols-1 max-md:gap-5 max-md:py-10 lg:px-0">
+      <div className="mx-auto grid min-h-[660px] max-w-[1100px] grid-cols-[1fr_.82fr] items-center gap-14 px-6 py-12 max-md:grid-cols-1 max-md:gap-5 max-md:py-10 lg:min-h-[calc(100svh-76px)] lg:px-0">
         <div>
           <motion.div
             variants={{ animate: { transition: { staggerChildren: 0.1 } } }}
