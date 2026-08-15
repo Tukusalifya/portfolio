@@ -26,7 +26,7 @@ export function Skills() {
         viewport={{ once: true }}
       >
         <SectionEyebrow text="cd skills" />
-        <h2 className="mt-7 text-[clamp(3.5rem,5.7vw,5.5rem)] leading-[.95] font-extrabold tracking-[-.04em]">
+        <h2 className="mt-7 text-[clamp(3.25rem,5.7vw,5.5rem)] leading-[.95] font-extrabold tracking-[-.04em]">
           Technologies{" "}
           <em className="block not-italic text-brush-orange">I use.</em>
         </h2>

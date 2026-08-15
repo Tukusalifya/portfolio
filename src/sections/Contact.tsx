@@ -50,7 +50,7 @@ export function Contact() {
       >
         <div>
           <SectionEyebrow text="cd contact" />
-          <h2 className="mt-12 text-[clamp(3.4rem,5.2vw,5rem)] leading-[.95] font-extrabold tracking-[-.04em]">
+          <h2 className="mt-12 text-[clamp(3.25rem,5.2vw,5rem)] leading-[.95] font-extrabold tracking-[-.04em]">
             Feel free,
             <em className="block not-italic text-brush-orange">contact me.</em>
           </h2>
