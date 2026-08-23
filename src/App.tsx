@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Nav } from "./components/Nav";
 import { Hero } from "./sections/Hero.tsx";
 import { About } from "./sections/About.tsx";
@@ -19,6 +20,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </>
   );
 }
