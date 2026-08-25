@@ -1,4 +1,4 @@
-// import { Check, Copy, ExternalLink, Phone } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 // import { useState } from "react";
 import { profile } from "../data/profile.ts";
