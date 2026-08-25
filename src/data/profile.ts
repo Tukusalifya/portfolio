@@ -27,7 +27,7 @@ export const profile = {
   },
   contact: {
     email: "sichalitukusalifya@gmail.com",
-    phone: "+260 762 628 048",
+    phone: "",
     githubLabel: "github.com/Tukusalifya",
     linkedinLabel: "https://www.linkedin.com/in/tukusalifya-sichali-a241a5425/",
   },
