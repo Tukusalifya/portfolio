@@ -1,19 +1,19 @@
-import { Check, Copy, ExternalLink, Phone } from "lucide-react";
+// import { Check, Copy, ExternalLink, Phone } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 import { profile } from "../data/profile.ts";
 import { BrandIcon } from "../components/BrandIcon.tsx";
 import { SectionEyebrow } from "../components/SectionEyebrow.tsx";
 
 export function Contact() {
   const reduce = useReducedMotion();
-  const [copied, setCopied] = useState(false);
+  // const [copied, setCopied] = useState(false);
   const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.contact.email}`;
-  const copyPhone = async () => {
-    await navigator.clipboard.writeText(profile.contact.phone);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1500);
-  };
+  // const copyPhone = async () => {
+  //   await navigator.clipboard.writeText(profile.contact.phone);
+  //   setCopied(true);
+  //   window.setTimeout(() => setCopied(false), 1500);
+  // };
   const rows = [
     {
       label: "$ EMAIL",
