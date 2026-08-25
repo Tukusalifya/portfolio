@@ -69,7 +69,7 @@ export function Contact() {
           </a>
         </div>
         <div className="rounded-[20px] border border-[#464646] bg-[#222222] px-8 py-4 shadow-[8px_10px_0_#101016]">
-          <div className="flex items-center gap-5 border-b border-[#3e3e3e] py-5">
+          {/* <div className="flex items-center gap-5 border-b border-[#3e3e3e] py-5">
             <span className="grid size-12 place-items-center border border-[#494949] text-zinc-300">
               <Phone size={20} />
             </span>
@@ -90,7 +90,7 @@ export function Contact() {
                 <Copy size={19} />
               )}
             </button>
-          </div>
+          </div> */}
           {rows.map((row) => (
             <div
               className="flex items-center gap-5 border-b border-[#3e3e3e] py-5 last:border-0"

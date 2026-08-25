@@ -18,8 +18,9 @@ export function Footer() {
               onClick={(event) => {
                 event.preventDefault();
                 const element = document.getElementById(currentLink);
-
-                if (element) {
+                if (currentLink === "top") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                } else if (element) {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
