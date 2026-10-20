@@ -32,5 +32,5 @@ export const profile = {
     linkedinLabel: "https://www.linkedin.com/in/tukusalifya-sichali-a241a5425/",
   },
   cvPath: "/cv/Tukusalifya Sichali CV.pdf",
-  availability: "currently: building useful things",
+  availability: "Currently learning Rust.",
 } as const;
