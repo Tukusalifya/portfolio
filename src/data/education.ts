@@ -13,7 +13,7 @@ export const education = [
   },
   {
     id: "holy-cross",
-    period: "2007–2014",
+    period: "2008–2014",
     institution: "Holy Cross Convent School",
     description: "Primary education",
   },
